@@ -1,0 +1,57 @@
+
+<form role="form" id="news_form" method="post" action="">
+    <div class="form-group">
+        <label>Выберите категорию</label>
+        <select class="input-120 form-control" name="id_categories">
+            <?php foreach($data['page'] as $categories):
+                if($categories['id'] != 5):?>
+                <option value="<?=$categories['id']?>"><?=$categories['name']?></option>
+            <?php
+                endif;
+            endforeach; ?>
+        </select>
+    </div>
+
+    <!--<div class="form-group">-->
+        <!--<label>Укажите даут</label>-->
+        <!--<input class="input-120 form-control" type="text" name="date" placeholder="дата" form="news_form">-->
+    <!--</div>-->
+
+    <div class="form-group">
+        <label>Заголовок</label>
+        <input class="input-240 form-control" type="text" name="title" placeholder="заголовок" form="news_form">
+    </div>
+
+    <div class="form-group">
+        <label>Основной текст</label>
+        <textarea id="textarea-1100" class="form-control" type="text" name="content" placeholder="контент" form="news_form"></textarea>
+    </div>
+
+    <div class="form-group">
+        <label>Начальное кол-во просмотров</label>
+        <input class="input-120 form-control" type="text" name="show_counter" placeholder="просмотры" form="news_form">
+    </div>
+
+    <div class="form-group">
+        <label>Тэги</label>
+        <input class="input-240 form-control" type="text" name="tags" placeholder="тэги" form="news_form">
+    </div>
+
+    <div>
+        <label>Аналитика</label>
+        <input type="checkbox" name="analitycs" placeholder="аналитика" form="news_form">
+
+        <label>Опубликовать</label>
+        <input type="checkbox" name="is_published" form="news_form">
+    </div>
+
+    <div class="form-group">
+        <button type="submit" class="button-120 btn btn-success" form="news_form">Создать</button>
+    </div>
+</form>
+
+<script>
+                // Replace the <textarea id="editor1"> with a CKEditor
+                // instance, using default configuration.
+                CKEDITOR.replace( 'content' , { width: '1000px', height: '300px' });
+</script>

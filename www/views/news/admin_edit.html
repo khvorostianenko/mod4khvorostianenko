@@ -1,0 +1,62 @@
+
+
+<form role="form" id="news_form" method="post" action="">
+    <input  hidden type="text" name="id" value="<?=$data['news']['id']?>">
+    <div class="form-group">
+        <label>Выберите категорию</label>
+        <select class="input-120 form-control" name="id_categories">
+            <?php foreach($data['page'] as $categories):?>
+               <?php if($categories['id'] != 5):?>
+                    <?php if($categories['id'] == $data['news']['id_categories']){ ?>
+                        <option selected value="<?=$categories['id']?>"><?=$categories['name']?></option>
+                    <?php } else { ?>
+                    <option value="<?=$categories['id']?>"><?=$categories['name']?></option>
+               <?php } ?>
+               <?php endif; ?>
+            <?php endforeach; ?>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label>Датa</label>
+        <input disabled class="input-120 form-control" type="text" name="date" form="news_form"  value="<?=$data['news']['date']?>">
+    </div>
+
+    <div class="form-group">
+        <label>Заголовок</label>
+        <input class="input-240 form-control" type="text" name="title" form="news_form" value="<?=$data['news']['title']?>">
+    </div>
+
+    <div class="form-group">
+        <label>Основной текст</label>
+        <textarea id="textarea-1100" class="form-control" type="text" name="content" form="news_form"><?=$data['news']['content']?></textarea>
+    </div>
+
+    <div class="form-group">
+        <label>Начальное кол-во просмотров</label>
+        <input class="input-120 form-control" type="text" name="show_counter" form="news_form"value="<?=$data['news']['show_counter']?>">
+    </div>
+
+    <div class="form-group">
+        <label>Тэги</label>
+        <input class="input-240 form-control" type="text" name="tags" form="news_form" value="<?=$data['news']['tags']?>">
+    </div>
+
+    <div>
+        <label>Аналитика</label>
+        <input type="checkbox" name="analitycs" form="news_form" <?=($data['news']['analitycs'])? "checked" : "" ?>>
+
+        <label>Опубликовать</label>
+        <input type="checkbox" name="is_published" form="news_form" <?=($data['news']['is_published'])? "checked" : "" ?>>
+    </div>
+
+    <div class="form-group">
+        <button type="submit" class="button-120 btn btn-success" form="news_form">Сохранить</button>
+    </div>
+</form>
+
+<script>
+                // Replace the <textarea id="editor1"> with a CKEditor
+                // instance, using default configuration.
+                CKEDITOR.replace( 'content' , { width: '1000px', height: '300px' });
+</script>

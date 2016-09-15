@@ -1,0 +1,12 @@
+<h2><?=$data['page']['title']?></h2><br>
+<span id="news_id" hidden><?=$data['page']['id']?></span>
+<?=$data['page']['date']?><br>
+<script src="/js/ajax.js"></script>
+Количество просмотров: <span id="main_counter"><?=$data['page']['show_counter']?></span><br>
+
+<script src="/js/ajax.js"></script>
+<?=$data['page']['content']?><br>
+<b>Теги:</b>
+<?php foreach($data['page']['tags_exp'] as $tag):?>
+    <a href="/news/tag/<?=$tag?>"><?=$tag?></a>,
+<?php endforeach; ?>

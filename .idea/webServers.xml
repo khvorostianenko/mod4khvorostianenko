@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="9996494b-6d9a-4815-a41b-351a9fb7a449" name="mod4khvorostianenko.time2act.com.loc" url="http://mod4khvorostianenko.time2act.com.loc">
+        <fileTransfer port="0" accessType="LOCAL" />
+      </webServer>
+      <webServer id="d8504726-8735-42cf-a51c-61463a717977" name="mod4misha" url="http://195.191.24.196">
+        <fileTransfer host="195.191.24.196" port="22" rootFolder="/home/xgnbpama/mod4khvorostianenko.time2act.com.ua" accessType="SFTP" password="df9bdfc4dffadf98dfd8df9fdfd2dfd0dfefdf92" username="xgnbpama">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+          <option name="port" value="22" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

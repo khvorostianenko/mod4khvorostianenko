@@ -21,7 +21,7 @@ class App{
         self::$router = new Router($uri);
         
         // Создаем подключение к базе данных
-        self::$db = new DB(Config::get('db.host'), Config::get('db.user'), Config::get('db.password'), Config::get('db.db_name'));
+        self::$db = DB::getInstance(Config::get('db.host'), Config::get('db.user'), Config::get('db.password'), Config::get('db.db_name'));
 
         // Загружаем параметры языка, значение по умолчанию 'en'
         Lang::load(self::$router->getLanguage());
@@ -34,10 +34,15 @@ class App{
         $controller_method = strtolower(self::$router->getMethodPrefix()).self::$router->getAction();
 
         $layout = self::$router->getRoute();
+        
         if( $layout == 'admin' && Session::get('role') != 'admin'){
-            if ($controller_method != 'admin_login'){
-                Router::redirect('/admin/users/login');
+            if ($controller_method != 'admin_index' || $controller_class != 'SigninController'){
+                Router::redirect('/admin/signin');
             }
+        }
+
+        if( $layout == 'user' && Session::get('role') != 'user' && Session::get('role') != 'admin'){
+            Router::redirect('/signin');
         }
 
         // Создаем новый экземепляр класс ContactsController

@@ -15,3 +15,64 @@ form{
     width: 400px;
     max-width: 400px;
 }
+
+/* admin */
+#main-admin-header-image{
+    width: 20%;
+    margin: auto;
+    display: block
+}
+
+#admin-signin{
+    width: 80%;
+    margin: auto;
+    display: block;
+}
+
+#admin_message{
+    text-align: right;
+}
+
+#admin_menu{
+    text-align: center;
+}
+
+.input-120, .button-120{
+    width: 120px;
+}
+
+.table-center, .p-center{
+    text-align: center;
+}
+
+.input-60{
+    width: 60px;
+}
+
+.input-30{
+    width: 30px;
+}
+
+.textarea-120{
+    width: 400px;
+    height: 120px;
+}
+
+.button-240{
+    width: 240px;
+}
+
+.button-center{
+    display: block;
+
+}
+
+#textarea-1100{
+    width: 1100px;
+    height: 150px;
+}
+
+/* main-page */
+.slider{
+
+}

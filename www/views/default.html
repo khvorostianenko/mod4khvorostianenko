@@ -2,40 +2,44 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title><?=Config::get('site_name') ?></title>
+    <title><?=Config::get('site_name')?></title>
     <link rel="stylesheet" href="/css/style.css">
+    <!--<script src="/js/admin.js"></script>-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <!--<script src="/js/ckeditor/ckeditor.js"></script>-->
+
 </head>
 <body>
+<div class="col-md-2">Реклама</div>
+<div class="col-md-2">Левый тулбар</div>
+<div class="col-md-6">
+    <a href="http://mod4khvorostianenko.time2act.com.loc/">На главную</a>
+    <?=$data['content']?>
+</div>
+<div class="col-md-2">
 
-    <nav class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <a class="navbar-brand" href="/"><?=Config::get('site_name') ?></a>
-            </div>
-            <div id="navbar" class="collapse navbar-collapse">
-                <ul class="nav navbar-nav">
-                    <li><a <?php if( App::getRouter()->getController() == 'pages') { ?>class="active"<?php } ?> href="/pages/">Pages</a></li>
-                    <li><a <?php if( App::getRouter()->getController() == 'contacts') { ?>class="active"<?php } ?> href="/contacts/">Contact Us</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-
-    <div class="container">
-
-        <div class="starter-template">
-            <?php if(Session::hasFlash()) {?>
-                <div class="alert alert-info" role="alert">
-                    <?php Session::flash(); ?>
-
-                </div>
-            <?php } ?>
-            <?=$data['content'] ?>
-        </div>
-    </div><!-- /.container -->
-
+    <form action="/news/tag" method="post">
+        <!--oninput="search_tags()"-->
+        <input type="text" name="tag" id="search_tags" list="tag_list">
+        <span id="errmsg"></span>
+        <datalist id="tag_list"></datalist>
+        <input hidden type="submit">
+    </form>
+    <script>
+$('#search_tags').keyup(function(){
+    var Value = $('#search_tags').val();
+    <!--$('#team_list').empty();-->
+    <!--$('#errmsg').text(Value);-->
+    forNewDom('/news/search/'+Value, 0, 'tag_list');
+    }
+);
+    </script>
+    <script src="/js/ajax.js"></script>
+    Реклама 2
+</div>
 </body>
 </html>

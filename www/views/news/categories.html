@@ -1,0 +1,7 @@
+<ul><h3>Новости из категории: <i><?=$data['page'][0]['cat_name']?></i></h3>
+    <?php if(!empty($data['page'])):?>
+    <?php foreach($data['page'] as $news):?>
+    <li><a href="/news/item/<?=$news['id']?>"><?=$news['title']?></a></li>
+    <?php endforeach; ?>
+    <?php endif; ?>
+</ul>
