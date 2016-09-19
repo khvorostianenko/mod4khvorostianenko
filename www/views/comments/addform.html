@@ -1,0 +1,13 @@
+
+    <form method="post" action="/comments/add" role="form">
+        <div class="form-group">
+            <label>Ваш комментарий:</label>
+            <textarea name="text" class="form-control" style="width: 100%" placeholder="введите текст..."></textarea><br>
+        </div>
+        <div class="form-group">
+            <input class="form-control btn btn-primary" type="submit" value="Добавить комментарий">
+        </div>
+        <input hidden name="id_news" type="text" value="<?=$data['page']['id']?>">
+        <input hidden name="id_user" type="text" value="<?=Session::get('id')?>">
+        <input hidden name="parent_id" type="text" value="<?=$data['page']['parent_id']?>">
+    </form>

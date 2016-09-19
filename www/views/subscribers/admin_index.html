@@ -1,0 +1,21 @@
+<h2>Подписчики</h2>
+<table  class="table table-striped table-center">
+    <tr>
+        <td>id</td>
+        <td>Имя</td>
+        <td>Email</td>
+        <td>Действие</td>
+    </tr>
+    <?php foreach ($data['subscribers'] as $value):?>
+    <tr>
+        <td><?=$value['id']?></td>
+        <td><?=$value['name']?></td>
+        <td><?=$value['email']?></td>
+
+        <td>
+            <a href="/admin/subscribers/delete/<?=$value['id']?>" onclick="return confirm('Вы точно хотите удалить подписчика. Это действие удалит и категорию и новости связанные с ней!!!');"><button class="btn button-120 btn-danger">Удалить</button></a>
+        </td>
+
+    </tr>
+    <?php endforeach;?>
+</table>

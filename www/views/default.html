@@ -4,42 +4,107 @@
     <meta charset="UTF-8">
     <title><?=Config::get('site_name')?></title>
     <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/drop_list.css">
     <!--<script src="/js/admin.js"></script>-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-
-    <!--<script src="/js/ckeditor/ckeditor.js"></script>-->
-
-</head>
-<body>
-<div class="col-md-2">Реклама</div>
-<div class="col-md-2">Левый тулбар</div>
-<div class="col-md-6">
-    <a href="http://mod4khvorostianenko.time2act.com.loc/">На главную</a>
-    <?=$data['content']?>
-</div>
-<div class="col-md-2">
-
-    <form action="/news/tag" method="post">
-        <!--oninput="search_tags()"-->
-        <input type="text" name="tag" id="search_tags" list="tag_list">
-        <span id="errmsg"></span>
-        <datalist id="tag_list"></datalist>
-        <input hidden type="submit">
-    </form>
-    <script>
-$('#search_tags').keyup(function(){
-    var Value = $('#search_tags').val();
-    <!--$('#team_list').empty();-->
-    <!--$('#errmsg').text(Value);-->
-    forNewDom('/news/search/'+Value, 0, 'tag_list');
-    }
-);
-    </script>
     <script src="/js/ajax.js"></script>
-    Реклама 2
+    <script src="/js/form_validate.js"></script>
+
+    <script src="/js/ad.js"></script>
+    <script src="/js/show_other_pages.js"></script>
+</head>
+
+<body style="background-color: <?=$data['body_style']?>">
+
+
+<div style="background-color: <?=$data['header_style']?>; height: 80px" id="header" >
+    <?=$data['nav_bar']?>
 </div>
+<br>
+<div class="col-md-offset-9 col-md-3">
+    <?php if(Session::get('login')): ?>
+        <p style="text-align: left">Добрый день, <?=Session::get('login')?>! <a class="btn btn-xs btn-default" href="/logout">  Выход</a></p>
+    <?php endif; ?>
+</div>
+<div>
+    <div class="col-md-2">
+        <?=$data['left_ad']?>
+    </div>
+    <div class="col-md-2">
+        <?=$data['left_bar']?>
+    </div>
+    <div class="col-md-6">
+
+        <!--<div>-->
+            <!--<a href="/">|Главная|</a>-->
+            <!--<a href="/signin">|Авториз|</a>-->
+            <!--<a href="/admin">|Администратор|</a>-->
+            <!--<?php if(!Session::get('login')): ?>-->
+            <!--<a href="/signup">|Регистр|</a>-->
+            <!--<?php endif; ?>-->
+            <!--<?php if(Session::get('login')): ?>-->
+            <!--<p style="text-align: right">Добрый день, <?=Session::get('login')?>!<a href="/logout"> Выход</a></p>-->
+            <!--<?php endif; ?>-->
+        <!--</div>-->
+        <?=$data['content']?>
+    </div>
+    <div class="col-md-2">
+        <div class="comment_block">
+            <div class="comment_info">что будем искать?</div>
+            <form id="search" action="/news/tag" method="post">
+                <!--oninput="search_tags()"-->
+                <input type="text" name="tag" id="search_tags" list="tag_list">
+                <span id="errmsg"></span>
+                <datalist id="tag_list"></datalist>
+                <input hidden type="submit">
+            </form>
+
+        </div>
+        <div>
+            <?=$data['right_ad']?>
+        </div>
+    </div>
+    <script>
+    $('#search_tags').keyup(function(){
+        var Value = $('#search_tags').val();
+        <!--$('#team_list').empty();-->
+        <!--$('#errmsg').text(Value);-->
+        forNewDom('/news/search/'+Value, 0, 'tag_list');
+        }
+    );
+        </script>
+    <script src="/js/ajax.js"></script>
+</div>
+<?php if(!Session::get('login')): ?>
+    <!--Всплывающий блок-->
+    <div style="display: none; padding: 100px; margin: 100px">
+        <div class="modalInner">
+            <section class="offer">
+                <form method="post" action="/subscribers" style="background-color: white; width: 400px; border: 20px solid white" role="form">
+                    Подпишитесь на нашу рассылку!
+                    <div class="form-group">
+                        <label>Email</label><br>
+                        <input class="form-control" type="text" name="email">
+                    </div>
+                    <div class="form-group">
+                        <label>Name</label><br>
+                        <input class="form-control" type="text" name="name">
+                    </div>
+                    <button class="btn btn-success">Сохранить</button>
+                </form>
+            </section>
+        </div>
+    </div>
+    <script src="/js/onexit.js"></script>
+<?php endif; ?>
+
+<link rel="stylesheet" href="/js/subscribe_window/jquery.arcticmodal.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+<script src="/js/subscribe_window/config.js"></script>
+<script src="/js/subscribe_window/jquery.arcticmodal.js"></script>
+
 </body>
 </html>

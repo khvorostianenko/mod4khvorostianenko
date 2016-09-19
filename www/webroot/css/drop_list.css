@@ -1,0 +1,65 @@
+/*Горизонтальное выпадающее меню a*/
+
+/*body{*/
+    /*background: white;*/
+/*}*/
+
+
+
+/* Блок меню*/
+ul.main-menu{
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    z-index: 1;
+
+}
+ul.nav li {
+    background: whitesmoke;
+    border-right: 1px solid #e2dfe4;
+    border-radius: 4px;
+    float: left; /*делаем меню горизонтальным*/
+    height: 30px;
+    list-style: none;
+}
+ul.nav li a {
+    text-decoration: none;
+    display: block;
+    padding: 5px 30px 5px 30px;
+}
+ul.nav li ul {
+    display: none;	/*скрываем вложенные пункты*/
+}
+ul.nav { /*задаём высоту и ширину меню*/
+    /*background: white;*/
+    height: auto;
+    width: auto;
+    padding: 5px;
+    margin: 20px;
+
+}
+
+/*Выпадающее меню*/
+
+ul.nav li:hover {
+    background: white;
+    position: relative;
+}
+ul.nav li:hover > ul {
+    border-top: 1px solid whitesmoke;
+    display: block;
+    position: absolute;
+    top: 30px; /*первый уровень меню раскрывается вниз*/
+    left: 0;
+}
+/*Второй и последующие уровни вложенности*/
+ul.nav li ul li{
+    border-bottom: 1px solid white;
+    height: auto;
+    width: 150px;
+}
+ul.nav li:hover ul li ul{
+    position: absolute;
+    top: 0;
+    left: 150px; /*второй и последующие уровни расскрываются вправо*/
+}

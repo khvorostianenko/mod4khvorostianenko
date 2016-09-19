@@ -1,9 +1,13 @@
 body{
-    padding-top: 50px;
+    padding-top: 0px;
 }
 
 .starter-template{
     padding: 40px 15px;
+}
+
+form#search{
+    width: auto;
 }
 
 form{
@@ -75,4 +79,31 @@ form{
 /* main-page */
 .slider{
 
+}
+.comment_block{
+    padding: 5px;
+    margin: 2px;
+    list-style:none;
+    border: solid  1px #eaeaea;
+    border-radius: 8px;
+
+}
+.comment_text{
+    font-size: 110%
+}
+.comment_info{
+    font-style: italic;
+    font-size: 80%
+}
+
+/* Adwertisment */
+
+.ad_block{
+    width: 100%;
+    height: 180px;
+
+    padding: 8px;
+    margin: 2px;
+    border: solid  1px #eaeaea;
+    border-radius: 3px;
 }

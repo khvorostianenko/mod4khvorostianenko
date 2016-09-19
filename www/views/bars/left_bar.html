@@ -1,0 +1,42 @@
+<h3>Топ 5 комментаторов!</h3>
+<div class="comment_block">
+    <?php foreach($data['top5_users'] as $user):?>
+        <?php $nick = preg_replace('/@.*/', '', $user['email']);?>
+        <a href="/comments/users/<?=$user['id']?>/<?=$nick?>"><?=$nick?></a> - <?=$user['count_comments']?><br>
+    <?php endforeach; ?>
+</div>
+
+<h3>Топ 3 новости!</h3>
+<div class="comment_block">
+    <?php foreach($data['top3_news'] as $news):?>
+    <a href="/news/item/<?=$news['id']?>"><?=$news['title']?></a> - <?=$news['most_commented']?> отзывов<br><br>
+    <?php endforeach; ?>
+</div>
+
+<h3>Расширенный поиск</h3>
+<div class="comment_block">
+   <form action="/news/widesearch" method="post">
+       <div >
+       <label>Период</label><br>
+       <select name="date" class="span3">
+           <option value="1">За последний час</option>
+           <option value="24">За день</option>
+           <option value="24*7">За неделю</option>
+       </select><br><br>
+        </div>
+       <label>Выберите тег(и)</label><br>
+
+       <select style="font-size: 90%" multiple size="5" name="tags[]" class="span3">
+           <?php foreach($data['search_tags'] as $tag):?>
+                <option value="<?=$tag?>"><?=$tag?></option>
+           <?php endforeach; ?>
+       </select><br><br>
+       <label>Категория(и)</label><br>
+       <select multiple size="5" name="id_categories[]">
+           <?php foreach($data['categories'] as $category):?>
+           <option value="<?=$category['id']?>"><?=$category['name']?></option>
+           <?php endforeach; ?>
+       </select><br><br>
+       <button type="submit">Поиск</button>
+   </form>
+</div>

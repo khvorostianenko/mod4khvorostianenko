@@ -1,0 +1,56 @@
+<br><br>
+<h2>Редактирование объявления</h2>
+<br><br>
+<form enctype="multipart/form-data" role="form" id="ad_form" method="post" action="/admin/ad/edit">
+    <input hidden type="text" name="id" value="<?=$data['ad']['id']?>">
+
+
+    <div class="form-group">
+        <label>Товар</label>
+        <input class="input-120 form-control" type="text" name="name" form="ad_form"  value="<?=$data['ad']['name']?>">
+    </div>
+
+    <div class="form-group">
+        <label>Цена</label>
+        <input class="input-240 form-control" type="text" name="price" form="ad_form" value="<?=$data['ad']['price']?>">
+    </div>
+
+    <div class="form-group">
+        <label>Ссылка</label>
+        <input class="input-240 form-control" type="text" name="href" form="ad_form" value="<?=$data['ad']['href']?>">
+    </div>
+
+    <div class="form-group">
+        <label>Компания</label>
+        <input class="input-120 form-control" type="text" name="company" form="ad_form" value="<?=$data['ad']['company']?>">
+    </div>
+
+    <div class="form-group">
+        <label>Телефон</label>
+        <input class="input-240 form-control" type="text" name="telephone" form="ad_form" value="<?=$data['ad']['telephone']?>">
+    </div>
+
+    <div class="form-group">
+        <label>Счетчик</label>
+        <input class="input-240 form-control" type="text" name="counter" form="ad_form" value="<?=$data['ad']['counter']?>">
+    </div>
+
+    <div>
+        <label>Опубликовать</label>
+        <input type="checkbox" name="is_published" form="ad_form" <?=($data['ad']['is_published'])? "checked" : "" ?>>
+    </div>
+
+    <div class="form-group">
+        <label>Картинка</label><br>
+        <img style="height: 200px" name="img" src="<?=$data['ad']['image']?>">
+    </div>
+
+    <div class="form-group">
+        <label>Заменить картинку</label>
+        <input class="input-240 form-control" type="file" name="image" placeholder="компания" accept="image/*" form="ad_form">
+    </div>
+
+    <div class="form-group">
+        <button type="submit" class="button-120 btn btn-success" form="ad_form">Сохранить</button>
+    </div>
+</form>

@@ -1,0 +1,37 @@
+
+<form role="form" action="" method="post">
+
+
+    <div class="form-group">
+        <label>id</label>
+        <input readonly class="form-control" type="text" name="id" value="<?=$data['menu']['id']?>">
+    </div>
+
+    <div class="form-group">
+        <label>Имя</label>
+        <input class="form-control" type="text" name="name" value="<?=$data['menu']['name']?>">
+    </div>
+
+    <div class="form-group">
+        <label>Ссылка</label>
+        <input class="form-control" type="text" name="href" value="<?=$data['menu']['href']?>">
+
+    </div>
+
+    <div class="form-group">
+        <label>Порядок показа</label>
+        <input class="form-control" type="text" name="show_method" value="<?=$data['menu']['show_method']?>">
+
+    </div>
+
+    <div class="form-group">
+        <label>Родитель</label>
+        <input class="form-control" type="text" name="parent_id" value="<?=$data['menu']['parent_id']?>">
+
+    </div>
+
+
+    <div class="form-group">
+        <button class="btn btn-success" type="submit">Сохранить запись</button>
+    </div>
+</form>

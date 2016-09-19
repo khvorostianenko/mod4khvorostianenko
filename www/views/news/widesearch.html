@@ -1,0 +1,45 @@
+<!--<?php var_dump($data['widesearch']);?>-->
+<?php if(empty($data['widesearch'][0]['message'])){ ?>
+    <ul><h3>Все новости: <br></h3>
+<?php } else {?>
+    <ul><h3>Поиск новосте по запросу: <br></h3>
+<?php } ?>
+    <i><?=$data['widesearch'][0]['message']?></i>
+    <br><br>
+    <?php if(!empty($data['widesearch'])):?>
+    <?php foreach($data['widesearch'] as $news):?>
+        <?php if(!empty($news['title'])){?>
+            <li><a href="/news/item/<?=$news['id']?>"><?=$news['title']?></a></li>
+        <?php } else { ?>
+            <br><br>
+            <p>К сожалению результаты по вашему запросы отсутствуют. <br>Выберите другие параметры</p>
+        <?php } ?>
+    <?php endforeach; ?>
+    <?php endif; ?>
+</ul>
+
+    <div style="text-align: center">
+        <?php
+        /* Входные параметры */
+        $count_pages = $data['count_for_paginatior']; // количество страниц
+
+        // Пример: автивная 1
+        if(!empty($data['pagination'])){
+            $active = $data['pagination'];
+        } else {
+            $active = 1; // текущая активная страница
+        }
+
+        $count_show_pages = 5   ; //  количество отображаемых страниц.
+        // Например, если будет 1000 страниц, то вывести их все весьма проблемно.
+        // Поэтому отображаться будет только заданное количество в этом параметре.
+        //$url = "/index.php";
+        $url = "/news/widesearch/1";
+        //$url_page = "/index.php?page=";
+        $url_page = "/news/widesearch/";
+
+        if(empty($data['widesearch'][0]['message'])){
+            paginator($count_pages, $active, $count_show_pages, $url, $url_page);
+        }
+        ?>
+    </div>

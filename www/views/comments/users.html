@@ -1,0 +1,40 @@
+<!--<?php var_dump($data)?>-->
+<br>
+<br>
+<h4>Комментарии пользователя:<b> <?=$data['nick']?></b></h4>
+<?php foreach($data['user'] as $user):?>
+<div class="comment_block">
+    <div class="comment_info">
+        <?=$user['date']?>:<br>
+    </div>
+    <div class="comment_text">
+        <?=$user['text']?><br><br>
+    </div>
+</div>
+<?php endforeach;?>
+<br>
+<p>Некоторые комментарии могут быть скрыты, до одобрения модератором</p>
+
+<div>
+<?php
+        /* Входные параметры */
+        $count_pages = $data['count_for_paginatior']; // количество страниц
+
+        // Пример: автивная 1
+        if(!empty($data['pagination'])){
+            $active = $data['pagination'];
+        } else {
+            $active = 1; // текущая активная страница
+        }
+
+        $count_show_pages = 5   ; //  количество отображаемых страниц.
+        // Например, если будет 1000 страниц, то вывести их все весьма проблемно.
+        // Поэтому отображаться будет только заданное количество в этом параметре.
+
+        $url = "/comments/users/{$data['user_id']}/{$data['nick']}/1";
+
+        $url_page = "/comments/users/{$data['user_id']}/{$data['nick']}/";
+
+        paginator($count_pages, $active, $count_show_pages, $url, $url_page);
+        ?>
+</div>

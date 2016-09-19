@@ -1,0 +1,43 @@
+<h2>Реклама</h2>
+<a href="/admin/ad/add" class="nav btn btn-success button-primary button-240">
+    Добавить объявление
+</a>
+<br><br>
+<?php if(isset($data['ad'])):?>
+        <table  class="table table-striped table-center">
+            <tr>
+                <td>id</td>
+                <td>Товар</td>
+                <td>Цена</td>
+                <td>Ссылка</td>
+                <td>Компания</td>
+                <td>Телефон</td>
+                <td>Переходы</td>
+                <td>Опубл</td>
+                <td>Картинка</td>
+                <td>Действие</td>
+            </tr>
+            <?php foreach($data['ad'] as $value):?>
+            <tr>
+                <td><?=$value['id']?></td>
+                <td><?=$value['name']?></td>
+                <td><?=$value['price']?></td>
+                <td><?=$value['href']?></td>
+                <td><?=$value['company']?></td>
+                <td><?=$value['telephone']?></td>
+                <td><?=$value['counter']?></td>
+                <td><?=$value['is_published']?></td>
+                <td>
+                    <!--<img style="width: 100px" src="http://minionomaniya.ru/wp-content/uploads/2016/01/%D0%9A%D0%B5%D0%B2%D0%B8%D0%BD.jpg">-->
+                    <img src="<?=$value['image']?>">
+                </td>
+
+                <td>
+                    <a href="/admin/ad/edit/<?=$value['id']?>"><button class="btn button-120 btn-primary">Редактировать</button></a><br><br>
+                    <a href="/admin/ad/delete/<?=$value['id']?>" onclick="return confirm('Вы точно хотите удалить объявление. Это действие удалит его безвозвратно');"><button class="btn button-120 btn-danger">Удалить</button></a>
+                </td>
+
+            </tr>
+            <?php endforeach;?>
+        </table>
+<?php endif; ?>

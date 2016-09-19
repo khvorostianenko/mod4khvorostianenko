@@ -1,0 +1,31 @@
+<div class="col-md-9">
+
+    <br>
+    <img id="main-header-image" src="/img/big_logo.png" style="width: 30%; margin: auto; display: block "/>
+    <br>
+    <br>
+    <div style="width: 70%; margin: auto; display: block ">
+        <div id="registrationForm" class="form-group">
+            <p style="color: <?=$data['color']?>"><?=$data['message']?></p>
+
+            <!--Вариант вывода сообщения из мвс-->
+            <?php if(Session::hasFlash()){ ?>
+            <div class="alert alert-info" role="alert">
+                <?php Session::flash(); ?>
+            </div>
+            <?php } ?>
+
+            <!--Было-->
+            <!--<p>Заполните форму для регистрации</p>-->
+            <div id='jsWarnings' style='color: red'></div>
+            <form action="" method="post" role="form" onSubmit="return validate_signup(this)">
+                <input class="form-control" type="text" name="email" placeholder="Введите email" value="<?=$data['email']?>"><br>
+                <input class="form-control" type="password" name="password" placeholder="Введите пароль"><br>
+                <input class="form-control" type="password" name="passwordRepeat" placeholder="Повторите пароль"><br>
+                <input class="btn btn-danger" type="submit" value="Зарегистрироваться">
+            </form>
+        </div>
+    </div>
+    <br>
+    <br>
+</div>

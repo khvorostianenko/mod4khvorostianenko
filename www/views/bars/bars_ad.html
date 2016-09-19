@@ -1,0 +1,52 @@
+<div class="comment_block">
+    <h3>Реклама</h3>
+    <!--<span id="counter_info"></span>-->
+    <?php if(isset($data['ad'])):?>
+        <?php for($i = 0; $i<count($data['ad']); $i++):?>
+            <?php  if($i%2 == 0 && $data['left_side_flag'] == true):?>
+                <div style="display: block; z-index : 3" onmouseover="ad_style('<?=$data['ad'][$i]['id']?>')" onmouseout="remove_style('<?=$data['ad'][$i]['id']?>')" >
+                    <br>
+                    <a target="_blank" onClick="forNewDom('/ad/counter/<?=$data['ad'][$i]['id']?>', 0, '')" href="<?=$data['ad'][$i]['href']?>">
+                        <img class="ad_block" src="<?=$data['ad'][$i]['image']?>">
+                    </a>
+                    <br>
+                </div>
+                <div style="text-align: center; font-size: small">
+
+                    <span><?=$data['ad'][$i]['name']?></span><br>
+                    <span> - цена <span id="ad_price_<?=$data['ad'][$i]['id']?>"><?=$data['ad'][$i]['price']?></span> грн</span><br>
+                    <span><a target="_blank" onClick="forNewDom('/ad/counter/<?=$data['ad'][$i]['id']?>', 0, '')" href="<?=$data['ad'][$i]['href']?>">Перейти на сайт</a></span>
+                    <div onmouseover="coupon('<?=$data['ad'][$i]['id']?>')" onmouseout="coupon('<?=$data['ad'][$i]['id']?>')"
+                         id="ad_coupon_<?=$data['ad'][$i]['id']?>" readonly
+                         style="display: none; text-align: center; height: 50px; font-size: small; border: 1px solid red; background-color: white" value="">
+                        <p>Купон <span id="coupon_text_<?=$data['ad'][$i]['id']?>"> </span><br>  на скидку 10%</p>
+                    </div>
+                    <!---->
+                </div>
+            <?php endif; ?>
+
+            <?php  if($i%2 != 0 && $data['left_side_flag'] == false):?>
+                <div style="display: block; z-index : 3" onmouseover="ad_style('<?=$data['ad'][$i]['id']?>')" onmouseout="remove_style('<?=$data['ad'][$i]['id']?>')" >
+                    <br>
+                    <a target="_blank" onClick="forNewDom('/ad/counter/<?=$data['ad'][$i]['id']?>', 0, '')" href="<?=$data['ad'][$i]['href']?>">
+                        <img class="ad_block" src="<?=$data['ad'][$i]['image']?>">
+                    </a>
+                    <br>
+                </div>
+                <div style="text-align: center; font-size: small">
+
+                    <span><?=$data['ad'][$i]['name']?></span><br>
+                    <span> - цена <span id="ad_price_<?=$data['ad'][$i]['id']?>"><?=$data['ad'][$i]['price']?></span> грн</span><br>
+                    <span><a target="_blank" onClick="forNewDom('/ad/counter/<?=$data['ad'][$i]['id']?>', 0, '')" href="<?=$data['ad'][$i]['href']?>">Перейти на сайт</a></span>
+                    <div onmouseover="coupon('<?=$data['ad'][$i]['id']?>')" onmouseout="coupon('<?=$data['ad'][$i]['id']?>')"
+                         id="ad_coupon_<?=$data['ad'][$i]['id']?>" readonly
+                         style="display: none; text-align: center; height: 50px; font-size: small; border: 1px solid red; background-color: white" value="">
+                        <p>Купон <span id="coupon_text_<?=$data['ad'][$i]['id']?>"> </span><br>  на скидку 10%</p>
+                    </div>
+                    <!---->
+                </div>
+            <?php endif; ?>
+
+        <?php endfor;?>
+    <?php endif; ?>
+</div>

@@ -26,8 +26,8 @@ if($_FILES['upload'])
     }
     else{
         $name =rand(1, 1000).'-'.md5($_FILES['upload']['name']).'.'.getex($_FILES['upload']['name']);
-        move_uploaded_file($_FILES['upload']['tmp_name'], "d:/xampp/mod4khvorostianenko/www/webroot/img/news/".$name);
-        $full_path = '/webroot/img/news/'.$name;
+        move_uploaded_file($_FILES['upload']['tmp_name'], "../../img/news/".$name);
+        $full_path = '/img/news/'.$name;
         $message = "Файл ".$_FILES['upload']['name']." загружен";
 //        $size=@getimagesize('images/'.$name);
 //        if($size[0]<50 OR $size[1]<50){

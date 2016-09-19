@@ -1,57 +1,77 @@
-<!-- Слайдер -->
-<div id="carousel" class="carousel slide">
-    <!-- Индикаторы слайдов -->
-    <ol class="carousel-indicators">
-        <li class="active" data-target="#carousel" data-slide-to="0"></li>
-        <li data-target="#carousel" data-slide-to="1"></li>
-        <li data-target="#carousel" data-slide-to="2"></li>
-    </ol>
 
-    <!-- Слайды -->
-    <div class="carousel-inner">
-        <?php $activeFlag = 1; ?>
-        <?php foreach($data['slider'] as $value):?>
-            <?php if($activeFlag == 1){?>
-                     <div class="item active">
-                     <?php $activeFlag = 0;?>
-            <?php } else { ?>
-                         <div class="item">
-                         <?php } ?>
-                    <img class="slider"  <?=$value['image']?> alt="" style='height: 350px; width: 100%;'>
-                    <div class="carousel-caption">
-                        <h3><a class="slider" href="/news/item/<?=$value['id']?>" style="color: white;"><?=$value['title']?></a></h3>
-                    </div>
-            </div>
-        <?php endforeach; ?>
+<div>
+    <!-- Слайдер -->
+    <div id="carousel" class="carousel slide">
+        <!-- Индикаторы слайдов -->
+        <ol class="carousel-indicators">
+            <li class="active" data-target="#carousel" data-slide-to="0"></li>
+            <li data-target="#carousel" data-slide-to="1"></li>
+            <li data-target="#carousel" data-slide-to="2"></li>
+        </ol>
 
+        <!-- Слайды -->
+        <div class="carousel-inner">
+            <?php $activeFlag = 1; ?>
+            <?php foreach($data['slider'] as $value):?>
+                <?php if($activeFlag == 1){?>
+                         <div class="item active">
+                         <?php $activeFlag = 0;?>
+                <?php } else { ?>
+                             <div class="item">
+                             <?php } ?>
+                        <img class="slider"  <?=$value['image']?> alt="" style='height: 350px; width: 100%;'>
+                        <div class="carousel-caption">
+                            <h3><a class="slider" href="/news/item/<?=$value['id']?>" style="color: white;"><?=$value['title']?></a></h3>
+                        </div>
+                </div>
+            <?php endforeach; ?>
+
+                        </div>
+
+        <!-- Стрелки переключения слайдов -->
+        <a href="#carousel" class="left carousel-control" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left"></span>
+        </a>
+        <a href="#carousel"  class="right carousel-control" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right"></span>
+        </a>
+
+        </div>
     </div>
-
-    <!-- Стрелки переключения слайдов -->
-    <a href="#carousel" class="left carousel-control" data-slide="prev">
-        <span class="glyphicon glyphicon-chevron-left"></span>
-    </a>
-    <a href="#carousel"  class="right carousel-control" data-slide="next">
-        <span class="glyphicon glyphicon-chevron-right"></span>
-    </a>
-
-</div>
 <!-- Конец слайдера -->
 
+    <div>
+        <br>
 
-<br>
-<ul> <h3>Читайте сегодня...</h3>
-    <?php
-    $old_cat = 0;;
-    foreach($data['page'] as $value):
-        $new_cat = $value['id'];
-        if($new_cat != $old_cat):?>
+        <ul><h3>Читайте сегодня...</h3>
+            <b><a href="/news/categories/5">Аналитика</a></b>
             <?php $counter = 0; ?>
-            </ul><ul><b><a href="/news/categories/<?=$value['id']?>"><?=$value['name'];?></a></b><br>
-            <?php $old_cat = $new_cat; ?>
-        <?php endif;?>
-        <?php if($counter < 5):?>
-            <?php $counter++;?>
+            <?php foreach($data['page'] as $value):?>
+            <?php if($counter < 5):?>
+            <?php if($value['analitycs'] == 1):?>
             <li><a href="/news/item/<?=$value['id_news']?>"><?=$value['title']?></a></li><br>
-        <?php endif; ?>
-    <?php endforeach; ?>
-</ul>
+            <?php $counter++;?>
+            <?php endif; ?>
+            <?php endif; ?>
+            <?php endforeach; ?>
+        </ul>
+
+        <ul>
+            <?php
+            $old_cat = 0;;
+            foreach($data['page'] as $value):
+                $new_cat = $value['id'];
+                if($new_cat != $old_cat):?>
+                    <?php $counter = 0; ?>
+                    </ul><ul><b><a href="/news/categories/<?=$value['id']?>"><?=$value['name'];?></a></b><br>
+                    <?php $old_cat = $new_cat; ?>
+                <?php endif;?>
+                <?php if($counter < 5):?>
+                    <?php $counter++;?>
+                    <li><a href="/news/item/<?=$value['id_news']?>"><?=$value['title']?></a></li><br>
+                <?php endif; ?>
+            <?php endforeach; ?>
+        </ul>
+
+    </div>
+</div>

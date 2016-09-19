@@ -5,8 +5,54 @@
 Количество просмотров: <span id="main_counter"><?=$data['page']['show_counter']?></span><br>
 
 <script src="/js/ajax.js"></script>
-<?=$data['page']['content']?><br>
+<?=$data['page']['content']?>
+<br><br>
+
+<?php if($data['page']['analitycs']):?>
+    <?php if(!Session::get('login')):?>
+        <p style="text-align: center">Для просмотра всей новости авторизируйтесь <a href="/signin">здесь</a></p>
+    <?php endif;?>
+<?php endif;?>
+
+
 <b>Теги:</b>
 <?php foreach($data['page']['tags_exp'] as $tag):?>
     <a href="/news/tag/<?=$tag?>"><?=$tag?></a>,
 <?php endforeach; ?>
+<br><hr>
+<div>
+
+<b>Мнения наших читателей:</b>
+    <?=$data['comments']?>
+
+    <?php if(Session::get('login')):?>
+    <hr>
+    <?php if($data['page']['id_categories'] == 3):?>
+        <p style="color: darkred">Комментарии из категории "политика" публикуются после проверки модератором</p>
+    <?php endif;?>
+        <form method="post" action="/comments/add" role="form">
+            <div class="form-group">
+                <label>Ваш комментарий:</label>
+                <textarea name="text" class="form-control" style="width: 100%" placeholder="введите текст..."></textarea><br>
+            </div>
+            <div class="form-group">
+                <input class="form-control btn btn-primary" type="submit" value="Добавить комментарий">
+            </div>
+            <input hidden name="id_news" type="text" value="<?=$data['page']['id']?>">
+            <input hidden name="id_user" type="text" value="<?=Session::get('id')?>">
+            <input hidden name="parent_id" type="text" value="0">
+        </form>
+    <?php endif;?>
+
+    <!--<?php foreach($data['comments'] as $value):?>-->
+        <!--<textarea class="form-control" style="width: 100%" placeholder="введите текст...">-->
+            <!--<?=$value['text']?>-->
+        <!--</textarea><br>-->
+    <!--<?php endforeach; ?>-->
+
+
+</div>
+<div>
+
+
+</div>

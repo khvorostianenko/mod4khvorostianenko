@@ -1,10 +1,5 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Михаил
- * Date: 31.07.2016
- * Time: 19:56
- */
+
 define('DS', DIRECTORY_SEPARATOR);
 
 // dirname возвращает имя родительского каталога

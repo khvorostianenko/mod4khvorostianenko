@@ -62,6 +62,15 @@ class DB{
 
     }
 
+    public function getLastId(){
+        if(!$this->connection){
+            return false;
+        }
+
+        $id = $this->connection->insert_id;
+        return $id;
+    }
+
     public function query($sql){
 
 

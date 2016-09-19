@@ -34,13 +34,15 @@ class SigninController extends Controller{
                 if(!$user){
                     $this->data['message'] = "Пользователь с email: {$email} не зарегистрирован";
                     $this->data['color'] = 'red';
-                }  else
+                }
+                else
                 {
                     $hash = $user['password'];
                     if(Password::verifyPassAndHash($password, $hash))
                     {
                         Session::set('role', $user['role']);
                         Session::set('login', $email);
+                        Session::set('id', $user['id']);
                         header('Location: user');
                     } else {
                         $this->data['message'] =  'Неверное значение имени и пароля!';
@@ -58,7 +60,7 @@ class SigninController extends Controller{
 
     public function admin_index()
     {
-        
+
         $this->data['message'] = '';
         $this->data['color'] = '';
 
@@ -98,6 +100,8 @@ class SigninController extends Controller{
                 Router::redirect('/admin');
             }
         }
+
+        
     }
     
     public function fix_string($string)

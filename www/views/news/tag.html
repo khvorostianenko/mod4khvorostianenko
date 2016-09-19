@@ -5,3 +5,26 @@
     <?php endforeach; ?>
     <?php endif; ?>
 </ul>
+
+<?php
+        /* Входные параметры */
+        $count_pages = $data['count_for_paginatior']; // количество страниц
+
+        // Пример: автивная 1
+        if(!empty($data['pagination'])){
+            $active = $data['pagination'];
+        } else {
+            $active = 1; // текущая активная страница
+        }
+
+        $count_show_pages = 5   ; //  количество отображаемых страниц.
+        // Например, если будет 1000 страниц, то вывести их все весьма проблемно.
+        // Поэтому отображаться будет только заданное количество в этом параметре.
+
+        $url = "/news/tag/{$data['tag']}/1";
+
+        $url_page = "/news/tag/{$data['tag']}/";
+
+        paginator($count_pages, $active, $count_show_pages, $url, $url_page);
+        ?>
+</div>

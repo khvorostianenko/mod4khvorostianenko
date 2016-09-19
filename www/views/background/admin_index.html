@@ -1,0 +1,30 @@
+<br><br>
+<h2>Фон сайта и навигационной панели</h2>
+<table  class="table table-striped table-center">
+    <tr>
+        <td>id</td>
+        <td>Элемент</td>
+        <td>Цвет фона</td>
+        <td>Действие</td>
+    </tr>
+    <br>
+    <?php foreach ($data['style'] as $value):?>
+    <tr>
+        <form class="form-group" id="style_form<?=$value['id']?>" method="post" action="/admin/background/add" >
+            <td>
+                <input form="style_form<?=$value['id']?>" class="form-control" readonly name="id" value="<?=$value['id']?>">
+            </td>
+            <td>
+                <input form="style_form<?=$value['id']?>" class="form-control" readonly name="name" value="<?=$value['name']?>">
+            </td>
+            <td>
+                <input class="form-control" class="input-120" type="text" name="color" placeholder="Цвет фона" form="style_form<?=$value['id']?>" value="<?=$value['color']?>">
+            </td>
+            <td>
+                <button type="submit" class="btn  button-120 btn-success" form="style_form<?=$value['id']?>">Сохранить</button>
+            </td>
+        </form>
+
+    </tr>
+    <?php endforeach;?>
+</table>

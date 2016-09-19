@@ -1,17 +1,13 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Михаил
- * Date: 01.08.2016
- * Time: 10:21
- */
-Config::set('site_name', 'Your Site Name');
+
+Config::set('site_name', 'News Site');
 
 Config::set('languages', array('en', 'fr'));
 
 Config::set('routes',array(
     'default' => '',
     'admin' => 'admin_',
+    'user' => 'user_'
 ));
 
 Config::set('default_route', 'default');

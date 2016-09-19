@@ -53,7 +53,7 @@ class CategoriesController extends Controller
     }
 
     public function admin_delete(){
-        var_dump($this->params);
+        
         if(isset($this->params[0])){
 
             $result = $this->model->delete($this->params[0]);

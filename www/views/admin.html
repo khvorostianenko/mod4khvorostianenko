@@ -8,8 +8,10 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <script src="/js/ajax.js"></script>
     <script src="/js/ckeditor/ckeditor.js"></script>
+    <script src="/js/show_other_pages.js"></script>
 </head>
 <body>
 <?php
@@ -26,6 +28,24 @@ if(Session::get('role') == 'admin'): ?>
         </a>
         <a href="/admin/news" class="nav btn btn-primary button-120" >
             Новости
+        </a>
+        <a href="/admin/comments" class="nav btn btn-primary button-120" >
+            Комментарии
+        </a>
+        <a href="/admin/comments/check" class="nav btn btn-danger button-120" >
+            Подтвердить
+        </a>
+        <a href="/admin/ad" class="nav btn btn-primary button-120" >
+            Реклама
+        </a>
+        <a href="/admin/menu" class="nav btn btn-primary button-120" >
+            Меню
+        </a>
+        <a href="/admin/background" class="nav btn btn-primary button-120" >
+            Фон
+        </a>
+        <a href="/admin/subscribers" class="nav btn btn-primary button-120" >
+            Подписчики
         </a>
     </div>
 <?php endif; ?>

@@ -1,0 +1,22 @@
+
+<form method="post" action="/admin/comments/edit/<?=$data['comment'][0]['id']?>">
+    <label>id комментария</label><br>
+    <input class="form-control" style="background-color: #dddddd" name="id" readonly type="text" value="<?=$data['comment'][0]['id']?>"><br>
+    <label>id пользователя</label><br>
+    <input class="form-control" style="background-color: #dddddd" name="id_user" readonly type="text" value="<?=$data['comment'][0]['id_user']?>"><br>
+    <label>Новость №</label><br>
+    <input class="form-control" style="background-color: #dddddd" name="id_news" readonly type="text" value="<?=$data['comment'][0]['id_news']?>"><br>
+    <label>Лайки</label><br>
+    <input class="form-control" name="likes" type="text" value="<?=$data['comment'][0]['likes']?>"><br>
+    <label>Текст</label><br>
+    <textarea class="form-control" name="text" style="width: 500px; height: 150px;"><?=$data['comment'][0]['text']?></textarea><br>
+    <label>Дата</label><br>
+    <input class="form-control" style="background-color: #dddddd" name="date" readonly type="text" value="<?=$data['comment'][0]['date']?>"><br>
+    <label>Родительский id</label><br>
+    <input class="form-control" style="background-color: #dddddd" name="parent_id" readonly type="text" value="<?=$data['comment'][0]['parent_id']?>"><br>
+    <label>Опубл</label><br>
+    <input  name="is_published" type="checkbox" <?=($data['comment'][0]['is_published'])? "checked" : "" ?>><br>
+    <label>Сохранить</label><br>
+    <input class="btn btn-success" type="submit" value="Сохранить">
+</form>
+
