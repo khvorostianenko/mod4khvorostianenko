@@ -38,6 +38,7 @@
           <excludedPaths>
             <excludedPath local="true" path="$PROJECT_DIR$/mvc БД.sql" />
             <excludedPath local="true" path="$PROJECT_DIR$/.idea" />
+            <excludedPath local="true" path="$PROJECT_DIR$/www/old" />
           </excludedPaths>
         </serverdata>
       </paths>
