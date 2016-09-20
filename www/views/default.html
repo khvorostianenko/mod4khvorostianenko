@@ -80,6 +80,8 @@
 </div>
 <?php if(!Session::get('login')): ?>
     <!--Всплывающий блок-->
+
+    <span style="display: none" id="subscriber_timer"><?=Session::get('time');?></span>
     <div style="display: none; padding: 100px; margin: 100px">
         <div class="modalInner">
             <section class="offer">
@@ -98,6 +100,7 @@
             </section>
         </div>
     </div>
+
     <script src="/js/onexit.js"></script>
 <?php endif; ?>
 

@@ -31,6 +31,10 @@ class PagesController extends Controller{
         Router::redirect('/admin/categories');
     }
 
-
+    public function seconds(){
+        if(!empty($this->params[0])){
+            Session::set('time', $this->params[0]);
+        }
+    }
 
 }

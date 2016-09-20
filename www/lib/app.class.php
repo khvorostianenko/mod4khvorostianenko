@@ -11,6 +11,11 @@ class App{
     }
 
     public static function run($uri){
+        
+        if(!Session::get('time')){
+            Session::set('time', 0);
+        }
+        
         // Создаем класс Роутер, передаем uri, разбиваем ури на части:
         // Пример: http://www.mvc.com/contacts/
         self::$router = new Router($uri);
