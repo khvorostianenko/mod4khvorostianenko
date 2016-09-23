@@ -85,8 +85,10 @@
     <div style="display: none; padding: 100px; margin: 100px">
         <div class="modalInner">
             <section class="offer">
-                <form method="post" action="/subscribers" style="background-color: white; width: 400px; border: 20px solid white" role="form">
+                <form method="post" onSubmit="return validate_subscriber(this)" action="/subscribers" style="background-color: white; width: 400px; border: 20px solid white" role="form">
                     Подпишитесь на нашу рассылку!
+                    <br><br>
+                    <span id="subscriberWarnings"></span>
                     <div class="form-group">
                         <label>Email</label><br>
                         <input class="form-control" type="text" name="email">

@@ -192,6 +192,7 @@ class NewsModel extends Model
                 $sql.= " and is_published = 1";
             }
             $number = 5*($pagination-1);
+            $sql.= " ORDER BY date DESC ";
             $sql.= " LIMIT {$number},5 ";
         }
         return $this->db->query($sql);

@@ -5,10 +5,12 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/logs/access.log" afterPath="$PROJECT_DIR$/logs/access.log" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/logs/error.log" afterPath="$PROJECT_DIR$/logs/error.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/controllers/pages.controller.php" afterPath="$PROJECT_DIR$/www/controllers/pages.controller.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/lib/app.class.php" afterPath="$PROJECT_DIR$/www/lib/app.class.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/config/config.php" afterPath="$PROJECT_DIR$/www/config/config.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/models/news.model.php" afterPath="$PROJECT_DIR$/www/models/news.model.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/views/bars/bars_ad.html" afterPath="$PROJECT_DIR$/www/views/bars/bars_ad.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/views/default.html" afterPath="$PROJECT_DIR$/www/views/default.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/webroot/js/subscribe_window/config.js" afterPath="$PROJECT_DIR$/www/webroot/js/subscribe_window/config.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/webroot/js/ajax.js" afterPath="$PROJECT_DIR$/www/webroot/js/ajax.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/webroot/js/form_validate.js" afterPath="$PROJECT_DIR$/www/webroot/js/form_validate.js" />
     </list>
     <ignored path="mod4khvorostianenko.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -35,11 +37,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="app.class.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/www/lib/app.class.php">
+      <file leaf-file-name="ajax.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/www/webroot/js/ajax.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="16" column="9" selection-start-line="14" selection-start-column="8" selection-end-line="16" selection-end-column="9" />
+            <state relative-caret-position="323">
+              <caret line="19" column="36" selection-start-line="19" selection-start-column="36" selection-end-line="19" selection-end-column="36" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="form_validate.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/www/webroot/js/form_validate.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="765">
+              <caret line="45" column="43" selection-start-line="45" selection-start-column="43" selection-end-line="45" selection-end-column="43" />
               <folding />
             </state>
           </provider>
@@ -48,34 +60,28 @@
       <file leaf-file-name="default.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/views/default.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176">
-              <caret line="82" column="0" selection-start-line="82" selection-start-column="0" selection-end-line="82" selection-end-column="0" />
-              <folding>
-                <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#p#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="config.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/www/webroot/js/subscribe_window/config.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" column="25" selection-start-line="15" selection-start-column="25" selection-end-line="15" selection-end-column="25" />
+            <state relative-caret-position="395">
+              <caret line="104" column="0" selection-start-line="104" selection-start-column="0" selection-end-line="104" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pages.controller.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/www/controllers/pages.controller.php">
+      <file leaf-file-name="config.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/www/config/config.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="545">
-              <caret line="33" column="30" selection-start-line="33" selection-start-column="30" selection-end-line="33" selection-end-column="30" />
+            <state relative-caret-position="374">
+              <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="bars_ad.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/www/views/bars/bars_ad.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="323">
+              <caret line="19" column="34" selection-start-line="19" selection-start-column="29" selection-end-line="19" selection-end-column="34" />
               <folding />
             </state>
           </provider>
@@ -96,7 +102,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/www/views/left_ad/index.html" />
         <option value="$PROJECT_DIR$/www/controllers/leftad.controller.php" />
         <option value="$PROJECT_DIR$/www/models/leftad.model.php" />
         <option value="$PROJECT_DIR$/www/views/bars/left_bar.html" />
@@ -110,7 +115,6 @@
         <option value="$PROJECT_DIR$/www/views/news/widesearch.html" />
         <option value="$PROJECT_DIR$/www/views/menu/admin_edit.html" />
         <option value="$PROJECT_DIR$/www/models/menu.model.php" />
-        <option value="$PROJECT_DIR$/www/models/news.model.php" />
         <option value="$PROJECT_DIR$/www/models/bars.model.php" />
         <option value="$PROJECT_DIR$/www/views/bars/header_style.html" />
         <option value="$PROJECT_DIR$/www/views/bars/body_style.html" />
@@ -123,7 +127,6 @@
         <option value="$PROJECT_DIR$/www/lib/db.class.php" />
         <option value="$PROJECT_DIR$/www/controllers/bars.controller.php" />
         <option value="$PROJECT_DIR$/www/controllers/signin.controller.php" />
-        <option value="$PROJECT_DIR$/www/config/config.php" />
         <option value="$PROJECT_DIR$/www/controllers/comments.controller.php" />
         <option value="$PROJECT_DIR$/www/views/comments/users.html" />
         <option value="$PROJECT_DIR$/www/lib/init.php" />
@@ -131,9 +134,7 @@
         <option value="$PROJECT_DIR$/www/views/admin.html" />
         <option value="$PROJECT_DIR$/www/views/pages/index.html" />
         <option value="$PROJECT_DIR$/www/webroot/css/style.css" />
-        <option value="$PROJECT_DIR$/www/views/bars/bars_ad.html" />
         <option value="$PROJECT_DIR$/www/controllers/news.controller.php" />
-        <option value="$PROJECT_DIR$/www/webroot/js/ajax.js" />
         <option value="$PROJECT_DIR$/www/views/menu/admin_index.html" />
         <option value="$PROJECT_DIR$/www/models/comments.model.php" />
         <option value="$PROJECT_DIR$/www/views/bars/nav_bar.html" />
@@ -146,7 +147,12 @@
         <option value="$PROJECT_DIR$/www/controllers/pages.controller.php" />
         <option value="$PROJECT_DIR$/www/webroot/js/onexit.js" />
         <option value="$PROJECT_DIR$/www/webroot/js/subscribe_window/config.js" />
+        <option value="$PROJECT_DIR$/www/models/news.model.php" />
+        <option value="$PROJECT_DIR$/www/views/bars/bars_ad.html" />
+        <option value="$PROJECT_DIR$/www/webroot/js/ajax.js" />
+        <option value="$PROJECT_DIR$/www/webroot/js/form_validate.js" />
         <option value="$PROJECT_DIR$/www/views/default.html" />
+        <option value="$PROJECT_DIR$/www/config/config.php" />
       </list>
     </option>
   </component>
@@ -185,6 +191,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -437,8 +445,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -503,7 +509,9 @@
       <workItem from="1474172249374" duration="33374000" />
       <workItem from="1474223436607" duration="13029000" />
       <workItem from="1474258518749" duration="14132000" />
-      <workItem from="1474367118472" duration="5437000" />
+      <workItem from="1474367118472" duration="6252000" />
+      <workItem from="1474532012959" duration="3267000" />
+      <workItem from="1474616140916" duration="316000" />
     </task>
     <task id="LOCAL-00001" summary="preparation of the working environment">
       <created>1473583126009</created>
@@ -533,11 +541,18 @@
       <option name="project" value="LOCAL" />
       <updated>1474273653324</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="final version 1.2 (subscr update)">
+      <created>1474372639600</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1474372639600</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="296574000" />
+    <option name="totallyTimeSpent" value="300972000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="0" />
@@ -603,7 +618,8 @@
     <MESSAGE value="some deletes" />
     <MESSAGE value="final version" />
     <MESSAGE value="final version 1.1" />
-    <option name="LAST_COMMIT_MESSAGE" value="final version 1.1" />
+    <MESSAGE value="final version 1.2 (subscr update)" />
+    <option name="LAST_COMMIT_MESSAGE" value="final version 1.2 (subscr update)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -612,20 +628,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/www/views/subscribers/admin_index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/views/subscribers/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="28" selection-start-line="0" selection-start-column="28" selection-end-line="0" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/www/lib/model.class.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
@@ -637,7 +639,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="142">
           <caret line="60" column="32" selection-start-line="60" selection-start-column="32" selection-end-line="60" selection-end-column="32" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -680,7 +681,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
           <caret line="17" column="1" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -688,7 +688,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
           <caret line="22" column="34" selection-start-line="22" selection-start-column="34" selection-end-line="22" selection-end-column="34" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -696,13 +695,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="1" column="18" selection-start-line="1" selection-start-column="18" selection-end-line="1" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/views/bars/bars_ad.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="28" column="120" selection-start-line="28" selection-start-column="120" selection-end-line="28" selection-end-column="120" />
         </state>
       </provider>
     </entry>
@@ -759,9 +751,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1190">
           <caret line="70" column="9" selection-start-line="54" selection-start-column="8" selection-end-line="70" selection-end-column="9" />
-          <folding>
-            <marker date="1474219824961" expanded="true" signature="1796:1868" placeholder="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -790,13 +779,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/controllers/news.controller.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4080">
-          <caret line="240" column="30" selection-start-line="240" selection-start-column="30" selection-end-line="240" selection-end-column="30" />
         </state>
       </provider>
     </entry>
@@ -853,10 +835,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="425">
           <caret line="25" column="1" selection-start-line="25" selection-start-column="1" selection-end-line="25" selection-end-column="1" />
-          <folding>
-            <marker date="1474272491243" expanded="true" signature="91:371" placeholder="SELECT c.*, categories" />
-            <marker date="1474272491243" expanded="true" signature="476:587" placeholder="SELECT id, t... news" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -864,10 +842,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1472750038081" expanded="true" signature="151:203" placeholder="select * fro... users" />
-            <marker date="1472750038081" expanded="true" signature="460:523" placeholder="select * fro... users" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -875,10 +849,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1472927704717" expanded="true" signature="144:186" placeholder="SELECT * FRO... users" />
-            <marker date="1472927704717" expanded="true" signature="513:584" placeholder="INSERT INTO users... " />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -886,59 +856,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="442">
           <caret line="26" column="1" selection-start-line="26" selection-start-column="1" selection-end-line="26" selection-end-column="1" />
-          <folding>
-            <marker date="1474200765850" expanded="true" signature="93:135" placeholder="SELECT * FRO... subscribers" />
-            <marker date="1474200765850" expanded="true" signature="257:292" placeholder="delete from " />
-            <marker date="1474200765850" expanded="true" signature="589:646" placeholder="INSERT INTO categories... " />
-            <marker date="1474200765850" expanded="true" signature="589:647" placeholder="INSERT INTO subscribers... " />
-            <marker date="1474200765850" expanded="true" signature="589:655" placeholder="INSERT INTO categories... " />
-            <marker date="1474200765850" expanded="true" signature="589:656" placeholder="INSERT INTO subscribers... " />
-            <marker date="1474200765850" expanded="true" signature="589:696" placeholder="INSERT INTO categories... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/config/config.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/models/news.model.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="547">
-          <caret line="162" column="20" selection-start-line="162" selection-start-column="20" selection-end-line="162" selection-end-column="20" />
-          <folding>
-            <marker date="1474179509374" expanded="true" signature="120:232" placeholder="SELECT n.*, news" />
-            <marker date="1474179509374" expanded="true" signature="520:629" placeholder="SELECT n.*, news" />
-            <marker date="1474179509374" expanded="true" signature="982:989" placeholder="SELECT COUNT... news" />
-            <marker date="1474179509374" expanded="true" signature="982:1087" placeholder="SELECT COUNT... news" />
-            <marker date="1474179509374" expanded="true" signature="1237:1345" placeholder="SELECT COUNT... news" />
-            <marker date="1474179509374" expanded="true" signature="1495:1558" placeholder="select * fro... news" />
-            <marker date="1474179509374" expanded="true" signature="1699:1735" placeholder="SELECT COUNT... news" />
-            <marker date="1474179509374" expanded="true" signature="1881:1940" placeholder="SELECT COUNT... news" />
-            <marker date="1474179509374" expanded="true" signature="2101:2146" placeholder="select * fro... news" />
-            <marker date="1474179509374" expanded="true" signature="2497:2542" placeholder="select * fro... categories" />
-            <marker date="1474179509374" expanded="true" signature="2741:2786" placeholder="select * fro... news" />
-            <marker date="1474179509374" expanded="true" signature="4153:4519" placeholder="INSERT INTO news... " />
-            <marker date="1474179509374" expanded="true" signature="4153:4536" placeholder="INSERT INTO news... " />
-            <marker date="1474179509374" expanded="true" signature="4627:5033" placeholder="UPDATE categ... " />
-            <marker date="1474179509374" expanded="true" signature="5188:5216" placeholder="delete from " />
-            <marker date="1474179509374" expanded="true" signature="5323:5352" placeholder="SELECT show_... news" />
-            <marker date="1474179509374" expanded="true" signature="5323:5364" placeholder="SELECT show_... news" />
-            <marker date="1474179509374" expanded="true" signature="5580:5644" placeholder="delete from " />
-            <marker date="1474179509374" expanded="true" signature="6013:6031" placeholder="select * fro... news" />
-            <marker date="1474179509374" expanded="true" signature="6576:6600" placeholder="SELECT * FRO... news" />
-            <marker date="1474179509374" expanded="true" signature="6576:6606" placeholder="SELECT * FRO... news" />
-            <marker date="1474179509374" expanded="true" signature="6576:6617" placeholder="SELECT * FRO... news" />
-            <marker date="1474179509374" expanded="true" signature="8200:8239" placeholder="SELECT name categories" />
-            <marker date="1474179509374" expanded="true" signature="8200:8251" placeholder="SELECT name categories" />
-            <marker date="1474179509374" expanded="true" signature="8735:8774" placeholder="SELECT name categories" />
-            <marker date="1474179509374" expanded="true" signature="9296:9344" placeholder="SELECT tags news" />
-            <marker date="1474179509374" expanded="true" signature="9302:9344" placeholder="select tags news" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -946,13 +863,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="547">
           <caret line="39" column="9" selection-start-line="39" selection-start-column="9" selection-end-line="39" selection-end-column="9" />
-          <folding>
-            <marker date="1474179256350" expanded="true" signature="113:131" placeholder="select * fro... menu" />
-            <marker date="1474179256350" expanded="true" signature="762:953" placeholder="INSERT INTO menu... " />
-            <marker date="1474179256350" expanded="true" signature="1044:1258" placeholder="UPDATE menu " />
-            <marker date="1474179256350" expanded="true" signature="1409:1437" placeholder="delete from " />
-            <marker date="1474179256350" expanded="true" signature="1568:1613" placeholder="select * fro... menu" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -960,35 +870,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="547">
           <caret line="121" column="35" selection-start-line="121" selection-start-column="35" selection-end-line="121" selection-end-column="35" />
-          <folding>
-            <marker date="1474271330629" expanded="true" signature="114:182" placeholder="select c.*, comments" />
-            <marker date="1474271330629" expanded="true" signature="114:201" placeholder="select c.*, comments" />
-            <marker date="1474271330629" expanded="true" signature="387:480" placeholder="select c.*, comments" />
-            <marker date="1474271330629" expanded="true" signature="583:696" placeholder="select c.*, comments" />
-            <marker date="1474271330629" expanded="true" signature="583:727" placeholder="select c.*, comments" />
-            <marker date="1474271330629" expanded="true" signature="826:867" placeholder="select * fro... comments" />
-            <marker date="1474271330629" expanded="true" signature="1089:1169" placeholder="UPDATE comme... " />
-            <marker date="1474271330629" expanded="true" signature="1844:1886" placeholder="SELECT id_ca... news" />
-            <marker date="1474271330629" expanded="true" signature="2509:2830" placeholder="INSERT INTO comments... " />
-            <marker date="1474271330629" expanded="true" signature="2921:3095" placeholder="UPDATE comme... " />
-            <marker date="1474271330629" expanded="true" signature="2921:3113" placeholder="UPDATE comme... " />
-            <marker date="1474271330629" expanded="true" signature="3368:3394" placeholder="SELECT likes... comments" />
-            <marker date="1474271330629" expanded="true" signature="3368:3400" placeholder="SELECT likes... comments" />
-            <marker date="1474271330629" expanded="true" signature="3368:3406" placeholder="SELECT likes... comments" />
-            <marker date="1474271330629" expanded="true" signature="3368:3411" placeholder="SELECT likes... comments" />
-            <marker date="1474271330629" expanded="true" signature="3374:3394" placeholder="select likes... comments" />
-            <marker date="1474271330629" expanded="true" signature="3646:3697" placeholder="SELECT likes... comments" />
-            <marker date="1474271330629" expanded="true" signature="3826:3866" placeholder="SELECT COUNT... comments" />
-            <marker date="1474271330629" expanded="true" signature="3826:3883" placeholder="SELECT COUNT... comments" />
-            <marker date="1474271330629" expanded="true" signature="3826:3888" placeholder="SELECT COUNT... comments" />
-            <marker date="1474271330629" expanded="true" signature="3826:3909" placeholder="SELECT COUNT... comments" />
-            <marker date="1474271330629" expanded="true" signature="4074:4156" placeholder="SELECT text,... " />
-            <marker date="1474271330629" expanded="true" signature="4502:4550" placeholder="UPDATE comme... " />
-            <marker date="1474271330629" expanded="true" signature="4713:4745" placeholder="DELETE FROM " />
-            <marker date="1474271330629" expanded="true" signature="4713:4765" placeholder="DELETE FROM " />
-            <marker date="1474271330629" expanded="true" signature="4713:4766" placeholder="DELETE FROM " />
-            <marker date="1474271330629" expanded="true" signature="4719:4745" placeholder="delete from " />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -996,14 +877,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="122">
           <caret line="34" column="35" selection-start-line="34" selection-start-column="35" selection-end-line="34" selection-end-column="35" />
-          <folding>
-            <marker date="1473758717952" expanded="true" signature="115:139" placeholder="select * fro... categories" />
-            <marker date="1473758717952" expanded="true" signature="348:399" placeholder="select * fro... categories" />
-            <marker date="1473758717952" expanded="true" signature="922:1017" placeholder="INSERT INTO categories... " />
-            <marker date="1473758717952" expanded="true" signature="922:1068" placeholder="INSERT INTO news... " />
-            <marker date="1473758717952" expanded="true" signature="1174:1358" placeholder="UPDATE news " />
-            <marker date="1473758717952" expanded="true" signature="1513:1547" placeholder="delete from " />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1011,7 +884,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
           <caret line="18" column="1" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1019,7 +891,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="233">
           <caret line="27" column="27" selection-start-line="27" selection-start-column="27" selection-end-line="27" selection-end-column="27" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1027,29 +898,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="2" column="1" selection-start-line="2" selection-start-column="1" selection-end-line="2" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/webroot/js/ajax.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-498">
-          <caret line="49" column="51" selection-start-line="49" selection-start-column="50" selection-end-line="49" selection-end-column="51" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/views/default.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="82" column="0" selection-start-line="82" selection-start-column="0" selection-end-line="82" selection-end-column="0" />
-          <folding>
-            <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1057,23 +905,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
           <caret line="13" column="9" selection-start-line="13" selection-start-column="9" selection-end-line="13" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/webroot/js/subscribe_window/config.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="25" selection-start-line="15" selection-start-column="25" selection-end-line="15" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/controllers/pages.controller.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="545">
-          <caret line="33" column="30" selection-start-line="33" selection-start-column="30" selection-end-line="33" selection-end-column="30" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1081,6 +912,80 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
           <caret line="16" column="9" selection-start-line="14" selection-start-column="8" selection-end-line="16" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/webroot/js/subscribe_window/config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/controllers/pages.controller.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="445">
+          <caret line="37" column="5" selection-start-line="33" selection-start-column="4" selection-end-line="37" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/controllers/news.controller.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="403">
+          <caret line="32" column="47" selection-start-line="32" selection-start-column="47" selection-end-line="32" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/models/news.model.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="440">
+          <caret line="194" column="42" selection-start-line="194" selection-start-column="42" selection-end-line="194" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/webroot/js/ad.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/views/bars/bars_ad.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="34" selection-start-line="19" selection-start-column="29" selection-end-line="19" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/webroot/js/ajax.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="36" selection-start-line="19" selection-start-column="36" selection-end-line="19" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/webroot/js/form_validate.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="765">
+          <caret line="45" column="43" selection-start-line="45" selection-start-column="43" selection-end-line="45" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/views/default.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="395">
+          <caret line="104" column="0" selection-start-line="104" selection-start-column="0" selection-end-line="104" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/config/config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
           <folding />
         </state>
       </provider>

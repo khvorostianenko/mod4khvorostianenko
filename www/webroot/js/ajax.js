@@ -24,7 +24,10 @@ function ad_style(id)
     coupon_id = 'ad_coupon_'+id;
     $("#"+coupon_id).fadeIn(1000);
     coupon_text = 'coupon_text_'+id;
-    document.getElementById(coupon_text).innerHTML = randWD(5);
+    if(document.getElementById(coupon_text).innerHTML == ''){
+        document.getElementById(coupon_text).innerHTML = randWD(5);
+    }
+
 }
 
 function remove_style(id)
@@ -35,7 +38,7 @@ function remove_style(id)
     document.getElementById(price_id).style.color = 'black';
     document.getElementById(price_id).style.fontSize = 'inherit';
     coupon_id = 'ad_coupon_'+id;
-    $("#"+coupon_id).fadeOut(5000);
+    //$("#"+coupon_id).fadeOut(5000);
 }
 
 function getCount(){
