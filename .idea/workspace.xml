@@ -1,16 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="da6bef60-220a-4860-b917-b372b4bd024c" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/copyright/profiles_settings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/deployment.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/mod4khvorostianenko.iml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/webServers.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/www/config/config.php" afterPath="" />
+    <list default="true" id="da6bef60-220a-4860-b917-b372b4bd024c" name="Default" comment="final version 1.4 (some mod)">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="mod4khvorostianenko.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -70,8 +62,8 @@
       <file leaf-file-name="config.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/www/config/config.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+            <state relative-caret-position="340">
+              <caret line="20" column="32" selection-start-line="20" selection-start-column="32" selection-end-line="20" selection-end-column="32" />
               <folding />
             </state>
           </provider>
@@ -311,7 +303,7 @@
       <workItem from="1474258518749" duration="14132000" />
       <workItem from="1474367118472" duration="6252000" />
       <workItem from="1474532012959" duration="3267000" />
-      <workItem from="1474616140916" duration="1185000" />
+      <workItem from="1474616140916" duration="1457000" />
     </task>
     <task id="LOCAL-00001" summary="preparation of the working environment">
       <created>1473583126009</created>
@@ -355,11 +347,18 @@
       <option name="project" value="LOCAL" />
       <updated>1474616526866</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="final version 1.4 (some mod)">
+      <created>1474617376589</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1474617376589</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="301841000" />
+    <option name="totallyTimeSpent" value="302113000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="0" />
@@ -427,7 +426,8 @@
     <MESSAGE value="final version 1.1" />
     <MESSAGE value="final version 1.2 (subscr update)" />
     <MESSAGE value="final version 1.3 (some mod)" />
-    <option name="LAST_COMMIT_MESSAGE" value="final version 1.3 (some mod)" />
+    <MESSAGE value="final version 1.4 (some mod)" />
+    <option name="LAST_COMMIT_MESSAGE" value="final version 1.4 (some mod)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -822,8 +822,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/www/config/config.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+        <state relative-caret-position="340">
+          <caret line="20" column="32" selection-start-line="20" selection-start-column="32" selection-end-line="20" selection-end-column="32" />
           <folding />
         </state>
       </provider>
