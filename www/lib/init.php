@@ -65,8 +65,6 @@ function paginator($count_pages, $active, $count_show_pages, $url, $url_page)
         }
         ?>
         <div style="text-align: center" id="pagination">
-<!--            <span>Страницы: </span>-->
-
             <?php if ($active != 1) { ?>
                 <a class="btn btn-xs btn-default" href="<?=$url?>" title="Первая страница">&lt;&lt;&lt;</a>
                 <a class="btn btn-xs btn-default" href="<?php if ($active == 2) { ?><?=$url?><?php } else { ?><?=$url_page.($active - 1)?><?php } ?>" title="Предыдущая страница">&lt;</a>
@@ -103,14 +101,18 @@ function paginator($count_pages, $active, $count_show_pages, $url, $url_page)
             <?php } ?>
         </div>
     <?php }
+    
     $fl = 0;
 
     $other_pages = '<div id="other_pages" style="text-align: center; display: none">';
-    foreach($arr_ajax as $key => $value){
-        $other_pages.="<a class='btn btn-xs btn-default' href='{$url_page}{$value}'>{$value}</a>";
+    
+    if (!empty($arr_ajax)) {
+        foreach($arr_ajax as $key => $value){
+            $other_pages.="<a class='btn btn-xs btn-default' href='{$url_page}{$value}'>{$value}</a>";
+        }
     }
+    
     $other_pages.= '</div>';
-
     ?>
     <p><?=isset($other_pages)? $other_pages : ''?></p>
 <?php
